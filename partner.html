@@ -1,0 +1,66 @@
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/button.css" />
+    <link
+  </head>
+  <body>
+    <div class="container purple topBotomBordersIn">
+      <a href="index.html">HOME</a>
+      <a href="Games.html">GAMES</a>
+      <a href="proxx.html">PROXYS</a>
+      <a href="random.html" >RANDOM</a>
+      <a href="partner.html" >PARTNERS</a>
+      <a href="chat.html">CHAT</a>
+      <a href="https://google.com">TEACHER Comming!</a>
+      <a href="settings.html">SETTINGS!</a>
+      
+    </div>
+
+
+<style>
+  body {
+    background: grey
+  }
+  
+</style>
+
+<sty>
+   <be>
+  This site was made with the help of my friend, he also has site you can visit with the button below. In the future I hope to callab with other people. Btw his site is not a game site like mine FYI
+  </be> 
+    </sty>
+
+   <center> <h1>His site!</h1>
+<button class="button1">Click now!</button>
+</center>
+<script>
+    var urlObj = new window.URL(window.location.href);
+    var url = "https://zens-home.glitch.me";
+
+    if (url) {
+        var win;
+
+        document.querySelector('button').onclick = function() {
+            if (win) {
+                win.focus();
+            } 
+            else {
+                win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = url;
+                win.document.body.appendChild(iframe);
+            }
+            document.querySelector('button').style.background='#6e6666';
+            document.querySelector('button').innerHTML="It worked!";
+        };
+    }
+</script>
+
+    <p></p>
+    <p></p>

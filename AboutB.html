@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    
+    <title>Apps</title>
+
+     
+   
+    
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <!--
+      This is the body of the page
+      Look at the elements and see how they appear in the rendered page on the right
+      Each element is defined using tags, with < and > indicating where each one opens and closes
+      There are elements for sections of the page, images, text, and more
+      The elements include attributes referenced in the CSS for the page style
+    -->
+
+    <!-- The wrapper and content divs set margins and positioning -->
+    <div class="wrapper">
+      <div class="content" role="main">
+        <!-- This is the start of content for our page -->
+        <h1 style="color:black;">About blank cloaker/h4>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/about-blank.css" />
+    <link rel="icon" type="image/x-icon" href="https://3kh0.github.io/favicon.ico" />
+    <title>about:blank | 3kh0</title>
+  </head>
+  <body>
+    <div class="console-container">
+      <div class="console">
+        <h1>about:blank</h1>
+        <div class="consolebody">
+          <p>Enter a URL you want to be opened in a about:blank page below:</p>
+          <p class="console-input"><input id="url-target" value="" autocomplete="on" type="text" autofocus /></p>
+          <p>Please make sure you have the https:// on the URL, it is best to just copy the link from the actual search bar! Google does not work since about:blank doesn't support google. This also doesn't unblock sites, so you have to use a proxy, the meaning of aboutblank is so the school doesn't see your history</p>
+        </div>
+      </div>
+      <div class="button-wrapper"> <button>
+        
+        </button>
+        <button id="create" class="console-button">Create page</button>
+        <button class="console-button" onclick="document.getElementById('url-target').value = ''">Clear input</button>
+
+    <script>
+      var url = document.getElementById("url-target");
+      var urlObj = new window.URL(window.location.href);
+      document.getElementById("create").onclick = function () {
+        if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
+    		url.value = 'https://' + url.value.split('https://').pop();
+        } else if (url.value.substring(0, 7) == 'http://'){
+        	url.value = 'https://' + url.value.split('http://').pop();
+        };
+        win = window.open();
+        win.document.body.style.margin = "0";
+        win.document.body.style.height = "100vh";
+        var iframe = win.document.createElement("iframe");
+        iframe.style.border = "none";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.margin = "0";
+        iframe.referrerpolicy = "no-referrer";
+        iframe.allow = "fullscreen";
+        iframe.src = url.value;
+        win.document.body.appendChild(iframe);
+        var script = win.document.createElement("script");
+        script.src = "../js/main.js";
+        win.document.body.appendChild(script);
+      };
+    </script>
+    <script src="https://3kh0.github.io/js/main.js"></script>
+  </body>
+</html>
+
+    <style>
+      body {
+        background: grey
+      }
+    </style>
